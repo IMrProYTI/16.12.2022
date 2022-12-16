@@ -5,11 +5,17 @@ def logic():
 
 	pass
 
+def myCount(x, y, z, w, out):
+	x, y, z, w = str(x), str(y), str(z), str(w)
+	return str(x + y + z + w).count(str(out))
+
 if __name__ == '__main__':
 	for x in range(2):
 		for y in range(2):
 			for z in range(2):
 				for w in range(2):
-					# if y == 0 and w == 0 and int(function(x, y, z, w)) == 0:
-					print(f"x:{x} z:{z} w:{w} y:{y} | F:{int(function(x, y, z, w))}")
+					if int(function(x, y, z, w)) == 0 and myCount(x,y,z,w,0) >= 1:
+						print(f"x:{x} z:{z} y:{y} w:{w} | F:{int(function(x, y, z, w))}")
 	pass
+
+# xzyw

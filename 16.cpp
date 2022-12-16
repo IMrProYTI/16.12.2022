@@ -1,3 +1,11 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <iostream>
 #include <cstdlib>
 
@@ -13,14 +21,14 @@ long F(long n)
     }
     else
     {
-        return F(div(n, a).quot) + div(n, a).quot;
+        return F(div(n, a).quot) + div(n, a).rem;
     }
 }
 
 int main()
 {
     long counter = 0;
-    for (long i = 237567892; i <= 1134567009; i++)
+    for (long i = 237567892; i <= 1134567009+1; i++)
     {
         if (F(i) > F(i + 1))
         {
